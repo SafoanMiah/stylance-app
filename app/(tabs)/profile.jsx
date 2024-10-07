@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const Browse = () => {
+const Profile = () => {
     return (
         <View>
-            <Text>Browse</Text>
+            <Text>Profile</Text>
         </View>
     )
 }
 
-export default Browse
+export default Profile

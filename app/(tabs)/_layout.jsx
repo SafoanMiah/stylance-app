@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { Redirect, Tabs } from "expo-router";
 import { Text, View } from "react-native";
-import { MaterialCommunityIcons } from '@expo/vector-icons'; // Import the icon
+import { MaterialCommunityIcons } from '@expo/vector-icons'; // https://icons.expo.fyi/Index
 
 const TabIcon = ({ icon, color, name, focused }) => {
     return (
@@ -11,28 +11,31 @@ const TabIcon = ({ icon, color, name, focused }) => {
                 size={30}
                 color={color}
             />
-            <Text
-                className={`${focused ? "font-psemibold" : "font-pregular"} text-xs`}
-                style={{ color: color }}
-            >
-                {name}
-            </Text>
-        </View>
+        </View >
     );
 };
 
 const TabsLayout = () => {
-
     return (
         <>
             <Tabs
                 screenOptions={{
                     tabBarActiveTintColor: "#fff5d6",
                     tabBarShowLabel: false,
+                    headerShown: false, // NOT WORKING!!
                     tabBarStyle: {
                         backgroundColor: "#5c503a",
-                        borderTopWidth: 1,
-                        height: 70,
+                        height: 60,
+                        paddingHorizontal: 20,
+                        borderRadius: 25,
+                        marginHorizontal: 15,
+                        marginBottom: 10,
+                        position: "absolute",
+                        shadowColor: "#000",
+                        shadowOffset: { width: 0, height: 2 },
+                        shadowOpacity: 0.3,
+                        shadowRadius: 5,
+                        elevation: 5,
                     },
                 }}
             >
@@ -43,19 +46,59 @@ const TabsLayout = () => {
                         headerShown: false,
                         tabBarIcon: ({ color, focused }) => (
                             <TabIcon
-                                icon="home"  // Pass the icon name here (from MaterialCommunityIcons)
+                                icon="home" // Pass the icon name here (from MaterialCommunityIcons)
                                 color={color}
-                                name="Home"
                                 focused={focused}
                             />
                         ),
                     }}
                 />
-            </Tabs>
+                <Tabs.Screen
+                    name="tinder"
+                    options={{
+                        title: "Tinder",
+                        headerShown: false,
+                        tabBarIcon: ({ color, focused }) => (
+                            <TabIcon
+                                icon="cards"
+                                color={color}
+                                focused={focused}
+                            />
+                        ),
+                    }}
+                />
+                <Tabs.Screen
+                    name="category"
+                    options={{
+                        title: "Category",
+                        headerShown: false,
+                        tabBarIcon: ({ color, focused }) => (
+                            <TabIcon
+                                icon="grid"
+                                color={color}
+                                focused={focused}
+                            />
+                        ),
+                    }}
+                />
+                <Tabs.Screen
+                    name="profile"
+                    options={{
+                        title: "Profile",
+                        headerShown: false,
+                        tabBarIcon: ({ color, focused }) => (
+                            <TabIcon
+                                icon="account"
+                                color={color}
+                                focused={focused}
+                            />
+                        ),
+                    }}
+                />
+            </Tabs >
         </>
     )
 }
 
-//change order and the add them
 
 export default TabsLayout;
