@@ -14,9 +14,9 @@ const App = () => {
     return (
         <StyledPressable
             onPress={() => router.push('/home')}
-            className="flex-1 items-center justify-center bg-primary"
+            className="flex-1 items-center justify-center bg-primary-200"
         >
-            <StyledText className="text-5xl font-bold text-secondary">STYLANCE.</StyledText>
+            <StyledText className="text-5xl font-bold text-secondary-200 right-1">STYLANCE.</StyledText>
             <StatusBar style="auto" />
         </StyledPressable>
     );

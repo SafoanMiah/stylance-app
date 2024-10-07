@@ -20,18 +20,18 @@ const TabsLayout = () => {
         <>
             <Tabs
                 screenOptions={{
-                    tabBarActiveTintColor: "#fff5d6",
+                    tabBarActiveTintColor: "rgb(240, 234, 210)",
                     tabBarShowLabel: false,
                     headerShown: false, // NOT WORKING!!
                     tabBarStyle: {
-                        backgroundColor: "#5c503a",
+                        backgroundColor: "rgb(173, 196, 120)",
                         height: 60,
                         paddingHorizontal: 20,
                         borderRadius: 25,
                         marginHorizontal: 15,
                         marginBottom: 10,
                         position: "absolute",
-                        shadowColor: "#000",
+                        shadowColor: "#000000",
                         shadowOffset: { width: 0, height: 2 },
                         shadowOpacity: 0.3,
                         shadowRadius: 5,
