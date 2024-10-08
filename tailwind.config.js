@@ -8,7 +8,8 @@ module.exports = {
         //https://coolors.co/visualizer/adc178-dde5b6-f0ead2-a98467-6c584c
         primary: {
           100: "rgb(237, 237, 237)",
-          200: "rgb(240, 234, 210)",
+          200: "rgb(252, 248, 230)",
+          300: "rgb(240, 234, 210)",
         },
         secondary: {
           100: "rgb(169, 132, 103)",
